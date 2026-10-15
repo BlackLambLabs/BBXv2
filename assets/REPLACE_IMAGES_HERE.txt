@@ -1,0 +1,24 @@
+BLACKBOXV2 IMAGE SLOTS
+
+Replace these files in place and keep the filenames exactly the same:
+
+1. hero-signal.png
+   Use for the top-right hero visual.
+   Recommended crop ratio: about 1.70:1 (landscape)
+
+2. proof-dashboard.png
+   Use for the "See the proof" screen.
+   Recommended crop ratio: about 1.74:1 (landscape)
+
+3. founder-signal-kit.png
+   Use for the Founder Signal Kit section.
+   Recommended crop ratio: about 1.74:1 (landscape)
+
+4. cipher-seal.png
+   Use for the Cipher Seal section.
+   Recommended crop ratio: about 2.44:1 (wide landscape)
+
+The files currently in this folder are crops from the supplied page mockup,
+so they are only visual placeholders. Use clean source artwork or high-pixel
+product renders for the final version. PNG is preferred for graphics with
+transparency; high-quality JPG/WebP is fine for full-bleed photography.

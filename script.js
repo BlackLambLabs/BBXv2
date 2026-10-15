@@ -123,4 +123,3 @@ document.getElementById("kickstarterForm").addEventListener("submit", function (
   showToast("Thanks — this is a front-end demo. Connect this form to your email provider before launch.");
   email.value = "";
 });
-
