@@ -1,1 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BlackBoXv2 — independent research with inspectable records."
+    />
+    <title>BlackBoXv2 — Know the record. Make your own call.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
 
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#top" aria-label="BlackBoXv2 home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 3 42 13.5v21L24 45 6 34.5v-21L24 3Z" />
+            <path d="m24 12 10 5.8v12.4L24 36l-10-5.8V17.8L24 12Z" />
+            <path d="m24 12 10 5.8L24 24l-10-6.2M24 24v12" />
+          </svg>
+        </span>
+        <span>BlackBoX<span>v2</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="sr-only">Open navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <a href="#record">Reports</a>
+        <a href="#method">Method</a>
+        <a href="#founder-kit">Founding release</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a class="button button--lime header-cta" href="#release">Kickstarter <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main-content">
+      <!-- 01 · Hero -->
+      <section class="hero section" id="top">
+        <div class="section-shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow reveal" data-reveal="down">Independent research. Inspectable records.</p>
+            <h1 class="reveal" data-reveal="left" data-delay="80">
+              Know the record.<br />
+              <span>Make the own call.</span>
+            </h1>
+            <p class="hero-summary reveal" data-reveal="left" data-delay="160">
+              Research, findings, and deductions—free to inspect, with deeper access for deeper work.
+            </p>
+            <div class="hero-actions reveal" data-reveal="up" data-delay="240">
+              <a class="button button--pink" href="#access">Explore the free preview <span aria-hidden="true">→</span></a>
+              <a class="button button--outline" href="#method">Memberships</a>
+            </div>
+            <p class="microcopy reveal" data-reveal="up" data-delay="320">Real records. Open method. No guesswork.</p>
+          </div>
+
+          <div class="hero-visual reveal" data-reveal="right" data-delay="120" aria-label="Illustrative rising data signal">
+            <p class="hero-visual-label">A clearer<br />view ahead.</p>
+            <div class="orb orb--one"></div>
+            <div class="orb orb--two"></div>
+            <svg class="signal-chart" viewBox="0 0 760 410" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="signalLine" x1="70" y1="80" x2="690" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF00B8" stop-opacity=".2" />
+                  <stop offset=".45" stop-color="#FF00B8" />
+                  <stop offset="1" stop-color="#FC5EE0" />
+                </linearGradient>
+                <filter id="signalGlow" x="-30%" y="-60%" width="160%" height="220%">
+                  <feGaussianBlur stdDeviation="7" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <linearGradient id="mountain" x1="321" y1="120" x2="455" y2="390" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6D95FA" stop-opacity=".42" />
+                  <stop offset="1" stop-color="#15234A" stop-opacity=".1" />
+                </linearGradient>
+              </defs>
+              <path class="mountain-line" d="M0 360 105 291l58 39 84-116 75 76 108-170 69 92 87-99 92 247H0Z" fill="url(#mountain)" />
+              <path class="mountain-line mountain-line--soft" d="m0 365 142-81 80 40 96-147 77 108 88-125 75 101 119-82 83 186" />
+              <path class="mountain-line mountain-line--soft" d="m14 380 110-68 83 33 92-82 76 72 91-126 77 81 92-75 80 49" />
+              <path class="chart-line" d="M60 238 C147 225 189 209 232 201 S321 182 371 159 S466 151 502 131 S596 115 686 52" stroke="url(#signalLine)" filter="url(#signalGlow)" />
+              <g class="chart-points" fill="#fff">
+                <circle cx="84" cy="235" r="5" /><circle cx="168" cy="214" r="5" /><circle cx="253" cy="200" r="5" />
+                <circle cx="336" cy="173" r="5" /><circle cx="418" cy="155" r="5" /><circle cx="504" cy="131" r="5" />
+                <circle cx="594" cy="112" r="5" /><circle cx="685" cy="52" r="5" />
+              </g>
+            </svg>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="mountain-band" aria-hidden="true"></div>
+      </section>
+
+      <!-- 02 · Access -->
+      <section class="section access-section" id="access">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow reveal" data-reveal="down">Three ways to access</p>
+              <h2 class="reveal" data-reveal="left">Independent research. Your level. No promises.</h2>
+            </div>
+            <p class="section-note reveal" data-reveal="right">
+              Same research process. Different levels of access. No investment advice.
+            </p>
+          </div>
+
+          <div class="access-grid">
+            <article class="access-card reveal" data-reveal="left">
+              <span class="index">01</span>
+              <h3>Free preview</h3>
+              <div class="access-card__body">
+                <span class="line-icon line-icon--document" aria-hidden="true"></span>
+                <p>Sample company research, key figures, and model snapshots.</p>
+              </div>
+              <a href="#record">Explore the free preview <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="access-card access-card--featured reveal" data-reveal="up" data-delay="80">
+              <span class="index">02</span>
+              <h3>Annual research access</h3>
+              <div class="access-card__body">
+                <span class="line-icon line-icon--bars" aria-hidden="true"></span>
+                <p>Full research, findings, and deductions. A transparent record you can inspect.</p>
+              </div>
+              <a href="#release">See membership options <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="access-card reveal" data-reveal="right" data-delay="160">
+              <span class="index">03</span>
+              <h3>Founder signal kit</h3>
+              <div class="access-card__body">
+                <span class="line-icon line-icon--cube" aria-hidden="true"></span>
+                <p>A limited-edition kit to support the founding release and our mission.</p>
+              </div>
+              <a href="#founder-kit">View the kit <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · Inspectable record -->
+      <section class="section record-section" id="record">
+        <div class="section-shell">
+          <div class="section-heading section-heading--tight">
+            <div>
+              <p class="eyebrow reveal" data-reveal="down">A record you can inspect</p>
+              <h2 class="reveal" data-reveal="left">Trace the work, not just the headline.</h2>
+            </div>
+            <p class="section-note reveal" data-reveal="right">
+              A timestamped research trail makes the process easier to read and question.
+            </p>
+          </div>
+
+          <div class="record-layout">
+            <div class="ledger-panel reveal" data-reveal="left">
+              <div class="panel-title">
+                <span>Model ledger <small>(illustrative)</small></span>
+                <span class="live-dot">Open record</span>
+              </div>
+              <div class="ledger-scroll">
+                <table>
+                  <thead>
+                    <tr><th>Date (ET)</th><th>Ticker</th><th>Action</th><th>Reason (summary)</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Jan 06, 2025 09:34</td><td>NVDA</td><td class="buy">Buy</td><td>Breakout setup, strong relative strength</td><td class="open">Open</td></tr>
+                    <tr><td>Jan 06, 2025 10:21</td><td>MSFT</td><td class="buy">Buy</td><td>Pullback to support, trend intact</td><td class="open">Open</td></tr>
+                    <tr><td>Jan 06, 2025 11:03</td><td>AAPL</td><td class="sell">Sell</td><td>Near-term target, taking partial profits</td><td class="closed">Closed</td></tr>
+                    <tr><td>Jan 06, 2025 13:58</td><td>AMZN</td><td class="buy">Buy</td><td>Improving structure, watching resistance</td><td class="open">Open</td></tr>
+                    <tr><td>Jan 06, 2025 15:41</td><td>GOOGL</td><td class="sell">Sell</td><td>Risk management, reduced exposure</td><td class="closed">Closed</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="panel-disclaimer">Illustrative sample only. This is not a recommendation, offer, or promise of results.</p>
+            </div>
+
+            <aside class="process-panel reveal" data-reveal="right" data-delay="80">
+              <div class="panel-title">
+                <span class="process-title"><span class="mini-document" aria-hidden="true"></span> Process notes</span>
+              </div>
+              <ol class="timeline">
+                <li><span>09:00</span><p>Pre-market scan and watchlist updates</p></li>
+                <li><span>09:30</span><p>Review overnight news and catalysts</p></li>
+                <li><span>12:00</span><p>Modelled open positions and adjusted stops</p></li>
+                <li><span>16:00</span><p>End-of-day review and recorded notes</p></li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · Method and curve -->
+      <section class="section method-section" id="method">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow--pink reveal" data-reveal="down">A real example. Illustrative, not a promise.</p>
+              <h2 class="reveal" data-reveal="left">See the process, not promises.</h2>
+            </div>
+            <p class="section-note reveal" data-reveal="right">
+              An illustrative example showing how research, models, and a record fit together.
+            </p>
+          </div>
+
+          <div class="curve-panel reveal" data-reveal="up">
+            <div class="curve-caption">
+              <span>Illustrative model equity curve <small>(not a promise of performance)</small></span>
+              <span>Year-end</span>
+            </div>
+            <svg class="curve-chart" viewBox="0 0 1120 430" role="img" aria-label="Illustrative upward trend line chart">
+              <defs>
+                <linearGradient id="curveFill" x1="0" y1="20" x2="0" y2="395" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF00B8" stop-opacity=".22" />
+                  <stop offset="1" stop-color="#FF00B8" stop-opacity="0" />
+                </linearGradient>
+                <filter id="curveGlow" x="-10%" y="-35%" width="120%" height="170%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+              <g class="gridlines">
+                <path d="M85 65H1060M85 151H1060M85 237H1060M85 323H1060M85 390H1060" />
+                <path d="M85 65V390M278 65V390M472 65V390M666 65V390M860 65V390M1060 65V390" />
+              </g>
+              <path class="curve-fill" d="M110 344 C205 327 238 317 300 308 S424 281 486 274 S603 258 666 236 S780 191 845 178 S952 122 1022 91 L1022 390 110 390Z" />
+              <path class="curve-line" d="M110 344 C205 327 238 317 300 308 S424 281 486 274 S603 258 666 236 S780 191 845 178 S952 122 1022 91" filter="url(#curveGlow)" />
+              <g class="curve-points"><circle cx="110" cy="344" r="5"/><circle cx="229" cy="322" r="5"/><circle cx="371" cy="293" r="5"/><circle cx="570" cy="267" r="5"/><circle cx="725" cy="214" r="5"/><circle cx="845" cy="178" r="5"/><circle cx="1022" cy="91" r="5"/></g>
+              <g class="axis-labels">
+                <text x="26" y="70">$120K</text><text x="26" y="156">$80K</text><text x="26" y="242">$40K</text><text x="42" y="395">$0K</text>
+                <text x="104" y="420">Start</text><text x="254" y="420">One month</text><text x="461" y="420">Q1</text><text x="652" y="420">Half-year</text><text x="839" y="420">Q3</text><text x="986" y="420">Year-end</text>
+              </g>
+              <g class="point-labels">
+                <text x="101" y="329">Start</text><text x="222" y="307">One month</text><text x="361" y="278">Q1</text><text x="644" y="252">Half-year</text><text x="833" y="163">Q3</text><text x="981" y="76">Year-end</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · Proof -->
+      <section class="section proof-section" id="proof">
+        <div class="section-shell proof-layout">
+          <div class="proof-copy">
+            <p class="eyebrow eyebrow--pink reveal" data-reveal="down">Uncover more with data</p>
+            <h2 class="reveal" data-reveal="left">Don’t believe<br />the pitch.<br /><span>Inspect the receipts.</span></h2>
+            <p class="reveal" data-reveal="left" data-delay="100">
+              Clear comparisons. A view of what you’re building toward. Real market benchmarks. No hype—just numbers.
+            </p>
+            <a class="button button--pink reveal" data-reveal="up" data-delay="160" href="#release">See the full analysis <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="proof-screen reveal" data-reveal="right">
+            <div class="screen-bar">
+              <span class="brand brand--tiny"><span class="brand-mark"></span>BlackBoX<span>v2</span></span>
+              <span>Research / data / context</span>
+            </div>
+            <h3>See the <span>proof.</span></h3>
+            <div class="metric-grid">
+              <div><b>120<span>+</span></b><small>Company coverage</small></div>
+              <div><b>50K<span>+</span></b><small>Data points</small></div>
+              <div><b>12</b><small>Model configurations</small></div>
+              <div><b>Multi-year</b><small>History</small></div>
+            </div>
+            <div class="mini-chart">
+              <div class="mini-chart__header"><span>Comparative view <small>(illustrative)</small></span><span class="chart-key"><i></i>BlackBoXv2 model <i></i>Selected benchmark</span></div>
+              <svg viewBox="0 0 600 205" preserveAspectRatio="none" aria-hidden="true">
+                <path class="mini-grid" d="M0 25H600M0 75H600M0 125H600M0 175H600M60 0V190M190 0V190M320 0V190M450 0V190M580 0V190" />
+                <path class="mini-fill" d="M30 161 C110 141 144 117 210 111 S310 92 371 68 S472 54 555 15V190H30Z" />
+                <path class="mini-model" d="M30 161 C110 141 144 117 210 111 S310 92 371 68 S472 54 555 15" />
+                <path class="mini-benchmark" d="M30 164 C100 160 160 148 230 143 S330 125 415 112 S500 99 555 88" />
+              </svg>
+              <div class="mini-axis"><span>Start</span><span>1 month</span><span>1 quarter</span><span>1 year</span></div>
+            </div>
+            <p class="screen-disclaimer">Illustrative example. Not a prediction of future results.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 · Founder kit -->
+      <section class="section kit-section" id="founder-kit">
+        <div class="section-shell kit-layout">
+          <div class="kit-copy">
+            <p class="eyebrow eyebrow--pink reveal" data-reveal="down">The founder signal kit</p>
+            <h2 class="reveal" data-reveal="left">A tangible part<br />of the record.</h2>
+            <p class="reveal" data-reveal="left" data-delay="90">
+              Early supporters receive the Founding Signal Kit with a limited edition lanyard, pen, and proof cards—a physical reminder to follow the process.
+            </p>
+            <div class="kit-features reveal" data-reveal="up" data-delay="150">
+              <span><i class="feature-icon feature-icon--lanyard"></i>Custom BlackBoXv2 lanyard</span>
+              <span><i class="feature-icon feature-icon--pen"></i>Premium pen with subtle branding</span>
+              <span><i class="feature-icon feature-icon--card"></i>Printed proof cards from the 7-day preview</span>
+              <span><i class="feature-icon feature-icon--cube"></i>Founding release collector packaging</span>
+            </div>
+            <div class="kit-actions reveal" data-reveal="up" data-delay="210">
+              <a class="button button--pink" href="#release">Claim the free kit at 1AA <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#release">Shop the BlackBoXv2 collection <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="kit-legal">One kit per order. Free U.S. shipping. Merchandise sold and fulfilled by First Amendment Apparel.</p>
+          </div>
+
+          <div class="kit-scene reveal" data-reveal="right">
+            <div class="kit-glow" aria-hidden="true"></div>
+            <div class="kit-package">
+              <div class="kit-package__top">
+                <span class="brand brand--tiny"><span class="brand-mark"></span>BlackBoX<span>v2</span></span>
+                <b>Founding signal kit</b>
+              </div>
+              <div class="kit-contents">
+                <div class="kit-card kit-card--one"><span>Give it<br /><b>7 days.</b></span><small>Do your own work.</small></div>
+                <div class="kit-card kit-card--two"><span>See the proof.</span><small>Inspect the record.</small></div>
+                <div class="kit-pen"><span></span></div>
+                <div class="kit-lanyard">BLACKBOXV2&nbsp; / &nbsp;BLACKBOXV2&nbsp; / &nbsp;BLACKBOXV2</div>
+              </div>
+              <div class="kit-sticker">Kick<br />starter</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · Cipher, release, FAQ -->
+      <section class="section release-section" id="release">
+        <div class="section-shell">
+          <div class="seal-layout">
+            <div class="seal-copy">
+              <p class="eyebrow reveal" data-reveal="down">The cipher seal</p>
+              <h2 class="reveal" data-reveal="left">One relic. One verified record.</h2>
+              <p class="reveal" data-reveal="left" data-delay="80">
+                A physical authentication coin for the founding release. The Cipher Seal represents the record, not a promise. A collector’s artifact for early supporters.
+              </p>
+              <div class="edition-label reveal" data-reveal="up" data-delay="130">Founding artifact concept <b>Edition 001 of 650</b></div>
+            </div>
+            <div class="seal-stage reveal" data-reveal="zoom">
+              <div class="seal-rig">
+                <div class="seal-coin">
+                  <span class="seal-ring">BLACKBOXV2 · CIPHER SEAL · BLACKBOXV2 · CIPHER SEAL ·</span>
+                  <span class="seal-cube"><i></i><i></i><i></i></span>
+                  <span class="seal-code">001 001 011</span>
+                </div>
+                <div class="seal-info">
+                  <strong>Cipher seal</strong>
+                  <span><i></i>Proof of micro</span>
+                  <span><i></i>Tamper verify</span>
+                  <span><i></i>Timestamp event</span>
+                  <span><i></i>Collector edition</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="launch-panel reveal" data-reveal="up" id="about">
+            <div class="launch-copy">
+              <p class="eyebrow">Be part of the first wave</p>
+              <h2>Research access and a Founder Signal Kit at a special founding price.</h2>
+              <div class="launch-perks">
+                <span>◈&nbsp; 12 months of research access</span>
+                <span>⌁&nbsp; Founder Signal Kit included</span>
+                <span>◉&nbsp; No automatic renewal</span>
+                <span>◇&nbsp; Early supporter pricing</span>
+              </div>
+            </div>
+            <form class="kickstarter-signup" id="kickstarterForm">
+              <p>Coming to</p>
+              <strong>Kickstarter</strong>
+              <label class="sr-only" for="launchEmail">Email address</label>
+              <div class="email-row">
+                <input id="launchEmail" name="email" type="email" placeholder="Enter your email address" autocomplete="email" required />
+                <button class="button button--lime" type="submit">Notify me <span aria-hidden="true">↗</span></button>
+              </div>
+              <small>No spam. Just the launch and important updates.</small>
+            </form>
+          </div>
+
+          <div class="how-it-works">
+            <p class="eyebrow reveal" data-reveal="down">How the record stays inspectable</p>
+            <div class="steps">
+              <article class="reveal" data-reveal="left">
+                <i class="step-icon">▣</i><h3>Define &amp; research</h3><p>We identify ideas, review key data, and document the reasoning before any trade.</p>
+              </article>
+              <span class="step-arrow" aria-hidden="true">→</span>
+              <article class="reveal" data-reveal="up" data-delay="70">
+                <i class="step-icon">▥</i><h3>Model &amp; record</h3><p>Hypothetical trades are recorded with timestamps and notes so you can see the process.</p>
+              </article>
+              <span class="step-arrow" aria-hidden="true">→</span>
+              <article class="reveal" data-reveal="right" data-delay="140">
+                <i class="step-icon">◇</i><h3>Review &amp; learn</h3><p>Daily and periodic reviews show what worked, what didn’t, and what we’re watching next.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="faq-layout">
+            <div class="faq-heading reveal" data-reveal="left">
+              <p class="eyebrow eyebrow--pink">Questions?</p>
+              <h2>Straight answers.</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="right">
+              <details><summary>What is BlackBoXv2?</summary><p>An independent research experience built around visible process, recorded notes, and illustrative model work.</p></details>
+              <details><summary>What do I get with the founding release?</summary><p>Release details are presented here as a concept. Replace this answer with your exact Kickstarter reward terms before launch.</p></details>
+              <details><summary>Is this investment advice?</summary><p>No. All material should be presented as education, research, and illustrative process—not individualized investment advice.</p></details>
+              <details><summary>What happens after 12 months?</summary><p>Set the exact renewal or expiration terms before launch. This mockup states no automatic renewal for the founding offer.</p></details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <div>
+          <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>BlackBoX<span>v2</span></span></a>
+          <p>blackboxv2.com<br />Independent research. Real records. Clear context.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#record">Reports</a><a href="#method">Method</a><a href="#founder-kit">Founding Release</a><a href="#about">About</a><a href="#top">Contact</a>
+        </nav>
+        <div class="socials" aria-label="Social links">
+          <a href="#top" aria-label="Video channel">▣</a><a href="#top" aria-label="X social profile">𝕏</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
