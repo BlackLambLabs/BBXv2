@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><title>BlackBoX local API checks</title></head><body><h1>BlackBoX local API checks</h1><p>Local-only test harness. Uses disposable example.com addresses and removes them.</p><button id="run">Run API checks</button><pre id="output" role="status">Ready</pre><script>
+const out=document.getElementById('output');
+document.getElementById('run').onclick=async()=>{
+ out.textContent='Running'; let passed=0; let receipt;
+ const email='qa-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'@example.com';
+ const request=(body,method='POST',headers={})=>fetch('/api/interest',{method,headers:{'Content-Type':'application/json',...headers},body:typeof body==='string'?body:JSON.stringify(body)});
+ const check=(ok,label)=>{if(!ok)throw new Error(label);passed++;out.textContent+='\nPASS '+label};
+ try{
+  check((await request({email,consent:false})).status===400,'explicit consent required');
+  check((await request({email:'invalid',consent:true})).status===400,'invalid email rejected');
+  check((await request('{bad')).status===400,'malformed JSON rejected');
+  check((await request('x'.repeat(3000))).status===400,'oversized body rejected');
+  check((await request({email,consent:true,company:'honeypot'})).status===400,'honeypot rejected');
+ }catch(e){out.textContent+='\nFAIL '+e;return;}
+ try{
+  const first=await request({email,consent:true}); const a=await first.json();receipt=a.removalToken;
+  check(first.ok && /^[0-9a-f-]{72}$/.test(receipt),'signup saved with removal receipt');
+  check(first.headers.get('cache-control')==='no-store','receipt response is not cacheable');
+  const second=await request({email:email.toUpperCase(),consent:true});const b=await second.json();
+  check(second.ok && b.removalToken!==receipt,'duplicate normalized signup receives no original secret');
+  check((await request({token:b.removalToken},'DELETE')).ok,'unassociated receipt removal is harmless');
+  for(const path of ['/method','/privacy','/downloads/research-journal.md','/downloads/threshold_lab.py','/downloads/observations.csv']){
+   const response=await fetch(path);check(response.ok&&(await response.text()).length>20,'resource '+path);
+  }
+  const zip=await fetch('/downloads/blackbox-research-starter.zip');const bytes=new Uint8Array(await zip.arrayBuffer());check(zip.ok&&bytes[0]===80&&bytes[1]===75,'download is a ZIP archive');
+  check((await request({token:receipt},'DELETE')).ok,'original receipt removes signup');receipt=null;
+  out.textContent+='\nALL '+passed+' CHECKS PASSED';
+ }catch(e){out.textContent+='\nFAIL '+e;}
+ finally{if(receipt)await request({token:receipt},'DELETE');}
+};
+</script></body></html>
