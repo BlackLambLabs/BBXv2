@@ -48,3 +48,13 @@ Updated the existing site using the supplied Mercury, Linear, Hostinger, and arc
 - Removed the development-only codex-preview metadata.
 
 References: https://mercury.com/ · https://linear.app/ · https://www.hostinger.com/ · https://web.archive.org/web/20250118094215/https://www.writecleancode.net/css/style.css
+
+## Palette refinement — October 23, 2026 (Pacific)
+
+Matched the user's archived March 19 Write Clean Code palette more closely: midnight navy `#0A0A20`, deep violet `#3F0493`, and bright violet `#B200EB` accents. Lighter violet is used where needed for readable text on dark panels.
+
+Removed large radial background glows, reduced the illustration aura from .33 to .08 opacity, and shortened or removed soft shadows. Light sections use a quiet lavender-white surface. Layout, copy, behavior, and audience are preserved.
+
+Six existing Node tests pass. Desktop, 390px mobile, and 768px tablet color/layout review passes with no horizontal overflow in the responsive frames. Production build checked during packaging.
+
+Reference: https://web.archive.org/web/20250319144823/https://www.writecleancode.net/
