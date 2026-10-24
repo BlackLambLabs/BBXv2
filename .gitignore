@@ -295,3 +295,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+
+# Keep full-stack website source and sample downloads visible to Git.
+!web/lib/
+!web/lib/**
+!web/public/downloads/
+!web/public/downloads/**
