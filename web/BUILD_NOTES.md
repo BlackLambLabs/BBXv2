@@ -27,13 +27,24 @@ artwork. The current public root remains unchanged. Proposed source lives under
 No payments, shipping, live trading signals, automated email, or public launch.
 No original research runner, credit ledger, or database was accessed or changed by
 this website implementation. Website tests are separate from the 66 local research
-tests described in the dated project notes. Deployment succeeded for Sites source commit `79bf80ef3dd275d8c1cefe5c0b371793953f35d7`.
-The hosted URL presents its expected ChatGPT sign-in gate. The review browser is
-not authenticated there, so the hosted signup was not exercised. Local and hosted
-D1 are separate; database persistence and removal were verified locally only.
-The private site remains owner-only. No access settings were relaxed for testing.
+tests described in the dated project notes. Production signup will receive a final
+smoke check after deployment; local and hosted D1 are separate.
 
 Before a public launch, implement verified email delivery/unsubscribe and
 support contact, retention operations, and abuse rate limiting. Before selling,
 finish the product, checkout, purchase terms and reliable delivery. Private-preview
 receipts support local-browser deletion and are not a full mailing platform.
+
+
+## Visual refresh — October 23, 2026 (Pacific)
+
+Updated the existing site using the supplied Mercury, Linear, Hostinger, and archived Write Clean Code references as visual influences. Original BlackBoX composition and copy; no third-party stylesheet or brand assets were incorporated.
+
+- Charcoal/violet palette, large centered typography, quieter navigation, and a research workspace illustration.
+- Warm editorial signup section with a serif accent, larger controls, explicit consent, and the existing saved-interest/removal behavior.
+- Responsive layouts verified in desktop, 390px mobile, and 768px tablet frames; no horizontal overflow at those sizes.
+- Six existing tests and TypeScript checks passed. Browser checks confirmed threshold 0.35 behavior, keyboard reset to 0.40, mobile navigation, signup persistence and removal in the local preview.
+- Backend, database schema, downloads, and access policy are unchanged. No automated emails or payments enabled. Temporary responsive-review page removed before packaging.
+- Removed the development-only codex-preview metadata.
+
+References: https://mercury.com/ · https://linear.app/ · https://www.hostinger.com/ · https://web.archive.org/web/20250118094215/https://www.writecleancode.net/css/style.css
