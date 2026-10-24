@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://blackbox-research.blacklamb-1638.chatgpt.site"),
   title: "BlackBoX — Research, opened up",
-  description: "Explore the process behind BlackBoX. Try the research lab, run the sample code, and follow the build from prototype to tested research system.",
+  description: "An independent research notebook from BlackLamb Labs. Read the free field notes, run the Python examples, and learn the mechanics behind a research system in development.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
