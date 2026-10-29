@@ -461,3 +461,34 @@ transform:none!important}
 /* The navigation toggle belongs only to compact layouts. */
 @media(min-width:761px){.menu{display:none}
 }
+
+/* Static adaptation of approved Site af1d853; preserve the reviewed layout and assets. */
+:root{--ink:#15212d;--paper:#f6f8fa;--muted:#465868;--line:#b4c2ce;--purple:#7040b5}
+.header{background:#f6f8faf5}
+.primary{background:#c4b5fd;color:#101020;border-color:#c4b5fd}
+.primary:hover:not(:disabled){filter:brightness(1.06)}
+.button:disabled{cursor:not-allowed;opacity:.72;transform:none;box-shadow:none}
+.choices{gap:12px}
+.choices a{padding:19px 16px;border:1px solid #10102030;border-radius:12px;background:var(--path-color);color:#101020;box-shadow:0 4px 18px #1010200c}
+.choices a:nth-child(1){--path-color:#f472d0}
+.choices a:nth-child(2){--path-color:#b89aff}
+.choices a:nth-child(3){--path-color:#67e8f9}
+.choices a:nth-child(4){--path-color:#fbbf24}
+.choices :is(b,span){color:#101020}
+.choices a:hover{border-color:#10102080;filter:brightness(1.06)}
+.hero{position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:10% 0 15% 50%;z-index:-1;border-radius:18px;background:linear-gradient(145deg,#9b5cf64d,#ed5cc330);pointer-events:none}
+.hero h1 span{color:#7040b5;background:none;-webkit-text-fill-color:currentColor}
+.hero-art{border:1px solid #b4c2ce;border-radius:16px;background:#fff;box-shadow:none;overflow:hidden}
+.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.shop-card{border:1px solid #b4c2ce;background:#fff}
+.native{background:#eaf0f5}
+.research-bridge{background:#080b12;border-block:1px solid #64798a}
+.research{--line:#64798a;background:#080b12}
+.research .header{background:#080b12f5;border-color:#64798a}
+.research .research-hero h1 span{color:#c4b5fd}
+.research :is(.table-wrap,.footer,th,td){border-color:#64798a}
+.research thead{background:#18222c;color:#a7e8c6}
+.research .note{border-top:2px solid #f5b4e2}
+.research .note h2{color:#f5b4e2}
+@media(max-width:760px){.choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choices a{padding:16px}.choices span{display:block;font-size:11px}.shop-grid{grid-template-columns:1fr}.hero:before{inset:45% 0 5% 0}}
