@@ -294,9 +294,10 @@ border-radius:5px;
 box-sizing:content-box;
 margin-bottom:30px}
 .launch h2{margin-bottom:25px}
-.launch-status{border-left:3px solid var(--pink);
-padding:20px 0 20px 40px}
-.launch-status h3{margin-block:22px}
+.launch-signup{padding:32px;border:1px solid #c4b5fd;border-radius:20px;background:linear-gradient(135deg,#ede9fe,#fdf2f8);box-shadow:0 12px 32px #7040b514}
+.launch-signup .eyebrow{color:#623298}
+.launch-signup h3{margin-block:16px}
+.launch-signup .button{margin-top:12px}
 .footer{padding-block:40px;
 border-top:1px solid var(--line);
 display:flex;
@@ -458,7 +459,7 @@ margin-bottom:30px}
 .concept-card img{aspect-ratio:1.5}
 .concept-card>div{padding:22px}
 .build-split{gap:35px}
-.launch-status{padding-left:24px}
+.launch-signup{padding:24px}
 .research-bridge{padding:65px 0}
 .research-hero{padding-block:65px 20px}
 .footer{align-items:start}
