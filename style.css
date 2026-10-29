@@ -133,9 +133,7 @@ grid-template-columns:1fr 1.12fr;
 gap:36px;
 padding-block:65px 110px;
 align-items:center}
-.hero h1 span{background:linear-gradient(120deg,var(--purple),#b0007a);
-background-clip:text;
-color:transparent}
+.hero h1 span{color:var(--purple)}
 .lead{font-size:22px;
 line-height:1.5;
 margin-top:26px}
