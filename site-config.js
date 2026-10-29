@@ -1,6 +1,7 @@
-// Single release setting. Keep the local route until the external host is verified.
+// Research stays on BlackBoXv2 for the current launch.
 window.BBX_CONFIG = Object.freeze({
   researchDestination: "/research/",
-  intendedResearchDestination: "https://blackboxresearch.pro/",
-  launchCaptureEndpoint: null
+  intendedResearchDestination: "/research/",
+  launchCaptureEndpoint: null,
+  launchSignupPage: "https://shop.firstamendmentapparel.com/pages/bbx-kickstarter-launch"
 });
